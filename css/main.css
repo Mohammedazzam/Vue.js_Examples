@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    text-align: center;
+    form {
+        margin: 20px auto;
+        input {
+            padding: 0 15px;
+            height: 46px;
+            background-color: #EFEFEF;
+            border: 1px solid #CCC;
+            &:focus {
+                outline: none;
+            }
+        }
+        button {
+            height: 48px;
+            border-color: transparent;
+            padding: 5px 10px;
+            background-color: #2196f3;
+            color: #FFF;
+            cursor: pointer;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+.links-urls {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    .link {
+        padding: 10px 20px;
+        display: block;
+        background-color: #EEE;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: #777;
+    }
+}
