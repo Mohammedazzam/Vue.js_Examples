@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>vue js Tutorials & Examples</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="elzero-app" class="container">
+        <form action="">
+            <input type="text" placeholder="Your Post Title" v-model="input">
+            <button @click.prevent='convertToSlug'>Convert To Slug</button>
+        </form>
+
+        <div class="slug-result">
+            www.sdsdsd.com <span>{{output}}</span>
+        </div>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#elzero-app',
+            data: {
+                input: '',
+                output: '',
+            },
+            methods: {
+                convertToSlug: function() {
+
+                    // Caching The Variable
+                    var theSlug = this.input;
+
+                    // Convert To LowerCase
+                    theSlug = theSlug.toLowerCase();
+
+                    // Replace Whitespace With Dash "-"
+                    theSlug = theSlug.replace(/\s+/g, '-');
+
+                    // Replace Ampersand With Dash and Spaces
+                    theSlug = theSlug.replace(/&/g, "-and-")
+
+                    this.output = theSlug;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
